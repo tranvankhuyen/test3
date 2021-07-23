@@ -42,7 +42,7 @@ void Cut(int a[], int n)
     }
     b[x] = a[n-1];
     std::cout<<x<<std::endl;
-    Print_Array(b, x + 2);
+    Print_Array(b, x + 1);
 }
 
 // main function
