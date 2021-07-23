@@ -17,6 +17,8 @@ void Print_Array(int a[], int n)
 // Cut function
 void Cut(int a[], int n)
 {
+    int b[20];
+    int x = 0;
     int check = 1;
     for (int i = 0; i <= n - 2; i++)
     {
@@ -34,10 +36,13 @@ void Cut(int a[], int n)
         }
         if (check == 1)
         {
-            std::cout << a[i] << " ";
+            b[x] = a[i];
+            ++x;
         }
     }
-    std::cout << a[n - 1]<<std::endl;
+    b[x] = a[n-1];
+    std::cout<<x<<std::endl;
+    Print_Array(b, x + 2);
 }
 
 // main function
@@ -46,6 +51,5 @@ int main()
     int a[] = {1, 2, 3, 4, 4};
     int n(5);
     Cut(a, n);
-    std::cout<<sizeof(a)/ sizeof(a[0]);
     return 0;
 }
